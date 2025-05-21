@@ -1,0 +1,492 @@
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+/* ========== NAVIGATION ========== */
+.nav-link-custom {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link-custom:hover {
+  color: white;
+  background-color: rgba(0, 188, 212, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.15);
+}
+
+.nav-link-active {
+  background-color: white;
+  color: #102840;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+/* Burger Toggle */
+.burger-toggle {
+  background-color: #102840;
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.burger-toggle:hover {
+  background-color: #18716e;
+  color: #ffffff;
+}
+
+/* Transition Menu */
+.transition-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.menu-visible { max-height: 300px; opacity: 1; }
+.menu-hidden { max-height: 0; opacity: 0; }
+
+/* ========== HEADER ========== */
+.header-dark-blue {
+  background: linear-gradient(90deg, #367c96, #0b243e);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== FOOTER ========== */
+.footer-dark-blue {
+  background: linear-gradient(90deg, #0c2742, #1d637c);
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-muted-text {
+  color: #cccccc;
+}
+
+/* ========== LAYOUT ========== */
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.site-title {
+  margin-bottom: 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* ========== HOME PAGE ========== */
+.home-banner-wrapper {
+  max-width: 800px;
+  max-height: 760px;
+}
+
+.home-banner-img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.home-banner-img:hover {
+  transform: scale(1.03);
+}
+
+.home-description {
+  max-width: 720px;
+  color: #444;
+}
+
+/* ========== BUTTONS ========== */
+.btn-pill,
+.btn-rounded-gradient {
+  background: linear-gradient(135deg, #00bcd4, #ff4081);
+  color: #fefefe !important;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-pill {
+  padding: 0.75rem 2.25rem;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-pill:hover,
+.btn-rounded-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0, 188, 212, 0.45);
+  color: #ffffff !important;
+}
+
+.btn-rounded-gradient {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 16px rgba(0, 188, 212, 0.3);
+}
+
+/* ========== ARROWS ========== */
+.btn-arrow {
+  background: linear-gradient(135deg, #00bcd4, #ff4081);
+  color: white;
+  font-size: 1.75rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  outline: none;    
+}
+
+.btn-arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== PRODUCT CARD STYLES ========== */
+.card-custom {
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 460px;
+  border-radius: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-zoom {
+  height: 220px;
+  width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 0 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.3rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.product-features {
+  font-size: 0.85rem;
+  color: #6a6a6a;
+  margin-bottom: 0.5rem;
+}
+
+.product-rating-stock {
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.text-brand-price {
+  color: #18716e;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ========== PRICING AREA ========== */
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 3.2rem;
+  justify-content: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.new-price {
+  font-weight: 700;
+  color: #18716e;
+  font-size: 1.1rem;
+}
+
+.invisible-placeholder {
+  height: 1.1rem;
+  visibility: hidden;
+}
+
+/* ========== DISCOUNT LABEL ========== */
+.discount-ribbon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e53935;
+  color: white;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
+}
+
+.about-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  max-width: 720px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.about-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.75;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.about-image-wrapper {
+  max-width: 520px;
+  margin: 0 auto 2.5rem auto;
+  width: 100%;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.about-mission-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-mission-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CONTACT SECTION IN ABOUT ===== */
+.contact-section {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-contact-link {
+  color: #00bcd4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.text-contact-link:hover {
+  color: #ff4081;
+}
+
+/* ========== LOGIN PAGE ========== */
+.login-section {
+  min-height: 80vh;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.signup-text-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.95rem;
+}
+
+.text-signup-link {
+  color: #00bcd4;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.text-signup-link:hover {
+  color: #ff4081;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 400px) {
+  .card-custom {
+    min-width: 240px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1,
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn-pill,
+  .btn-rounded-gradient {
+    font-size: 0.85rem;
+    padding: 0.45rem 1.4rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .d-flex.overflow-auto {
+    flex-direction: column !important;
+    overflow-x: hidden !important;
+  }
+
+  .card-custom {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .login-card {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-description,
+  .about-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .about-mission-card {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-image-wrapper {
+    padding: 0 1rem;
+  }
+
+  .about-mission-card {
+    padding: 0 1rem;
+  }
+}
+
+/* ===== LOGIN CARD RESPONSIVE STYLES ===== */
+.login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+.login-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .login-card {
+    max-width: 500px;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .login-card {
+    max-width: 540px;
+  }
+}
