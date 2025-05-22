@@ -21,9 +21,9 @@ const Home = () => {
       </p>
 
       {/* Explore Button */}
-      <a href="/product" className="btn btn-lg fw-semibold mt-4 shadow btn-pill">
+       <Link to="/product" className="btn btn-lg fw-semibold mt-4 shadow btn-pill">
         🚀 Explore Products
-      </a>
+      </Link>
     </div>
   );
 };
