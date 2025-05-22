@@ -5,10 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode basename="/techstore-frontend">
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter basename="/techstore-frontend">
+    <App />
+  </BrowserRouter>
 );
