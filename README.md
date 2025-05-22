@@ -5,9 +5,18 @@
 
 ---
 
+## 🚀 Live Demo
+
+Check out the live version here:  
+[https://ffmahani.github.io/techstore-frontend/#/](https://ffmahani.github.io/techstore-frontend/#/)
+
+> **Note:** The app uses hash-based routing (`#/`) to ensure smooth navigation and avoid 404 errors on GitHub Pages.
+
+---
+
 ## 📸 Screenshot
 
-![Mahsham TechStore Homepage](/assets/screenshot.png)
+![Mahsham TechStore Homepage](assets/screenshot.png)
 
 ---
 
