@@ -1,9 +1,9 @@
-import Smartwatch from "../assets/smartwatch.png";
-import Headphones from "../assets/headphones.png";
-import Speaker from "../assets/speaker.png";
-import Earbuds from "../assets/earbuds.png";
-import Charger from "../assets/charger.png";
-import Assistant from "../assets/assistant.png";
+import Smartwatch from "/assets/smartwatch.png";
+import Headphones from "/assets/headphones.png";
+import Speaker from "/assets/speaker.png";
+import Earbuds from "/assets/earbuds.png";
+import Charger from "/assets/charger.png";
+import Assistant from "/assets/assistant.png";
 import { useRef } from "react";
 
 const products = [

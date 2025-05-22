@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/techstore-frontend">
+  <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/techstore-frontend' : '/'}>
     <App />
   </BrowserRouter>
 );

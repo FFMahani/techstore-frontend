@@ -1,4 +1,4 @@
-import HomeBanner from "../assets/banner.png";
+import HomeBanner from "/assets/banner.png";
 
 const Home = () => {
   return (

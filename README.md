@@ -7,7 +7,7 @@
 
 ## 📸 Screenshot
 
-![Mahsham TechStore Homepage](src/assets/screenshot.png)
+![Mahsham TechStore Homepage](/assets/screenshot.png)
 
 ---
 
