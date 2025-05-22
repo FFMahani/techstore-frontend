@@ -16,7 +16,7 @@ Check out the live version here:
 
 ## 📸 Screenshot
 
-![Mahsham TechStore Homepage](assets/screenshot.png)
+![Mahsham TechStore Homepage](screenshot.png)
 
 ---
 
