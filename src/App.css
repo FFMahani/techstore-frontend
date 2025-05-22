@@ -490,3 +490,12 @@ body {
     max-width: 540px;
   }
 }
+
+@media (max-width: 576px) {
+  .signup-text-wrap {
+    white-space: normal;    
+    overflow: visible;     
+    text-overflow: clip;   
+    font-size: 0.85rem;    
+  }
+}
