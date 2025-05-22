@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import "../App.css";
@@ -36,7 +37,10 @@ const Signup = () => {
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
               {/* Email */}
               <div className="mb-3 text-start">
-                <label htmlFor="email" className="form-label text-muted fw-medium">
+                <label
+                  htmlFor="email"
+                  className="form-label text-muted fw-medium"
+                >
                   Email
                 </label>
                 <input
@@ -52,18 +56,25 @@ const Signup = () => {
                     },
                   })}
                 />
-                {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
+                {errors.email && (
+                  <div className="invalid-feedback">{errors.email.message}</div>
+                )}
               </div>
 
               {/* Password */}
               <div className="mb-3 text-start">
-                <label htmlFor="password" className="form-label text-muted fw-medium">
+                <label
+                  htmlFor="password"
+                  className="form-label text-muted fw-medium"
+                >
                   Password
                 </label>
                 <input
                   type="password"
                   id="password"
-                  className={`form-control ${errors.password ? "is-invalid" : ""}`}
+                  className={`form-control ${
+                    errors.password ? "is-invalid" : ""
+                  }`}
                   placeholder="At least 6 characters"
                   {...register("password", {
                     required: "Password is required",
@@ -73,18 +84,27 @@ const Signup = () => {
                     },
                   })}
                 />
-                {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
+                {errors.password && (
+                  <div className="invalid-feedback">
+                    {errors.password.message}
+                  </div>
+                )}
               </div>
 
               {/* Confirm Password */}
               <div className="mb-3 text-start">
-                <label htmlFor="confirmPassword" className="form-label text-muted fw-medium">
+                <label
+                  htmlFor="confirmPassword"
+                  className="form-label text-muted fw-medium"
+                >
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   id="confirmPassword"
-                  className={`form-control ${errors.confirmPassword ? "is-invalid" : ""}`}
+                  className={`form-control ${
+                    errors.confirmPassword ? "is-invalid" : ""
+                  }`}
                   placeholder="Repeat your password"
                   {...register("confirmPassword", {
                     required: "Please confirm your password",
@@ -94,15 +114,27 @@ const Signup = () => {
                     },
                   })}
                 />
-                {errors.confirmPassword && <div className="invalid-feedback">{errors.confirmPassword.message}</div>}
+                {errors.confirmPassword && (
+                  <div className="invalid-feedback">
+                    {errors.confirmPassword.message}
+                  </div>
+                )}
               </div>
 
               {/* Server Error */}
-              {serverError && <div className="alert alert-danger small py-2">{serverError}</div>}
+              {serverError && (
+                <div className="alert alert-danger small py-2">
+                  {serverError}
+                </div>
+              )}
 
               {/* Submit */}
               <div className="d-grid mt-4">
-                <button type="submit" className="btn btn-pill" disabled={isSubmitting}>
+                <button
+                  type="submit"
+                  className="btn btn-pill"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? "Signing up..." : "📝 Sign Up"}
                 </button>
               </div>
@@ -110,9 +142,12 @@ const Signup = () => {
 
             <p className="mt-3 mb-0 text-muted text-center">
               Already have an account?{" "}
-              <a href="/login" className="text-signup-link text-decoration-none">
+              <Link
+                to="/login"
+                className="text-signup-link text-decoration-none"
+              >
                 Login
-              </a>
+              </Link>
             </p>
           </div>
         </div>
