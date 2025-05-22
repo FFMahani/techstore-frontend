@@ -139,8 +139,8 @@ const Signup = () => {
                 </button>
               </div>
             </form>
-
-            <p className="mt-3 mb-0 text-muted text-center">
+            
+            <p className="mt-3 mb-0 text-muted text-center signup-text-wrap">
               Already have an account?{" "}
               <Link
                 to="/login"
