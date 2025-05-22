@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HomeBanner from "/assets/banner.png";
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
       </p>
 
       {/* Explore Button */}
-       <Link to="/product" className="btn btn-lg fw-semibold mt-4 shadow btn-pill">
+      <Link to="/product" className="btn btn-lg fw-semibold mt-4 shadow btn-pill">
         🚀 Explore Products
       </Link>
     </div>
